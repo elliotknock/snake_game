@@ -15,13 +15,16 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
 
     def update_scoreboard(self):
+        """Updates the scoreboard."""
         self.write(f"Score: {self.score}", False, align=ALIGNMENT, font=FONT)
 
     def game_over(self):
+        """Shows a game over screen."""
         self.goto(0, 0)
         self.write(f"GAME OVER", False, align=ALIGNMENT, font=FONT)
 
     def increase_score(self):
+        """Increases the players score when food is picked up."""
         self.score += 1
         self.clear()
         self.update_scoreboard()
